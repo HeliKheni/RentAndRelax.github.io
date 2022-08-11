@@ -40,6 +40,7 @@ var appimages = [
     { img: "../img/app2.jpg",imgname: "North York"},
     { img: "../img/app3.jpg",imgname:"Etobicoke"}
 ];
+alert("hello");
 function makeappImage()
 {
     for(let i=0;i<images.length;i++)
