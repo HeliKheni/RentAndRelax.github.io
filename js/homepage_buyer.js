@@ -36,17 +36,19 @@ function showSlides(n) {
 }
 // this display areaimages on page load
 var appimages = [
-    { img: "../img/app1.jpg",imgname: "Down Town"},
-    { img: "../img/app2.jpg",imgname: "North York"},
-    { img: "../img/app3.jpg",imgname:"Etobicoke"}
+    { img: "/img/app1.jpg",imgname: "Down Town"},
+    { img: "/img/app2.jpg",imgname: "North York"},
+    { img: "/img/app3.jpg",imgname:"Etobicoke"}
 ];
-alert("hello");
 function makeappImage()
 {
+    var hh= window.location.href.split('/');
+    hh.pop();
+    hh=hh.join('/');
     for(let i=0;i<images.length;i++)
     {
         var img = document.createElement('img')
-        img.src = appimages[i].img;
+        img.src = hh + appimages[i].img;
         var papp = document.createElement('p');
         papp.textContent = appimages[i].imgname;
         document.getElementById('areacontents').appendChild(img);
@@ -54,17 +56,20 @@ function makeappImage()
     }
 }
 var images = [
-    { img: "../img/base1.jpg",imgname: "$1000 - 1 bedroom"},
-    { img: "../img/base2.jpg",imgname: "$500 - 2 bedrrom"},
-    { img: "../img/base3.jpg",imgname:"$1500 - condo"}
+    { img: "/img/base1.jpg",imgname: "$1000 - 1 bedroom"},
+    { img: "/img/base2.jpg",imgname: "$500 - 2 bedrrom"},
+    { img: "/img/base3.jpg",imgname:"$1500 - condo"}
 ];
 var index = 0;
 function makeImage()
 {
+    var hh= window.location.href.split('/');
+    hh.pop();
+    hh=hh.join('/');
     for(let i=0;i<images.length;i++)
     {
         var img = document.createElement('img')
-        img.src = images[i].img;
+        img.src = hh + images[i].img;
         var p = document.createElement('p')
         document.getElementById('content').appendChild(img);
         p.textContent = images[i].imgname;
