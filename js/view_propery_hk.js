@@ -17,9 +17,9 @@ function findValue()
   let allimages= document.getElementsByClassName('home-part');
     
   // get value which select by user in dropdown for searching
-  var areavalue = document.getElementById('area').value;
-  var typevalue = document.getElementById('type').value;
-  var pricevalue = document.getElementById('price').value;
+  let areavalue = document.getElementById('area').value;
+  let typevalue = document.getElementById('type').value;
+  let pricevalue = document.getElementById('price').value;
 
   $('.home-part').hide();
     
@@ -53,7 +53,7 @@ function findValue()
   //Display all images
   for(let i = 0 ; i<allimages.length ; i++)
   {
-      //display all images array 
+    //display all images array 
     allimages[i].style.display = 'block';
   }
 
