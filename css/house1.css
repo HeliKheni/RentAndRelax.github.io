@@ -177,11 +177,4 @@ img {vertical-align: middle;}
   to {opacity: 1}
 }
 
-/*Extra Media Queries*/
 
-@media screen and (max-width: 970px)
-{
-  .nav-links .desktop-items{
-    display:flex;
-  }
-}
